@@ -31,14 +31,14 @@ Current file tree structure is shown below:
 │                       └── starter
 │                           └── SpringBootStarterApplicationTests.java
 └── web
-├── pom.xml
-└── src
-├── main
-│   ├── java
-│   │   └── com
-│   │       └── patagonia
-│   │           └── controller
-│   │               └── MainController.java
-│   └── resources
-└── test
-└── java
+    ├── pom.xml
+    └── src
+        ├── main
+        │   ├── java
+        │   │   └── com
+        │   │       └── patagonia
+        │   │           └── controller
+        │   │               └── MainController.java
+        │   └── resources
+        └── test
+            └── java
