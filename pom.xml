@@ -40,18 +40,6 @@
   </dependencyManagement>
 
   <dependencies>
-    <!-- 项目内的引用 -->
-<!--    <dependency>-->
-<!--      <groupId>${project.groupId}</groupId>-->
-<!--      <artifactId>web</artifactId>-->
-<!--      <version>${project.version}</version>-->
-<!--    </dependency>-->
-<!--    <dependency>-->
-<!--      <groupId>${project.groupId}</groupId>-->
-<!--      <artifactId>service</artifactId>-->
-<!--      <version>${project.version}</version>-->
-<!--    </dependency>-->
-
     <!-- spring 依赖 -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
