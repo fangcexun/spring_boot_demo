@@ -1,9 +1,9 @@
-package com.patagonia.spring_boot_starter;
+package com.patagonia.starter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.patagonia")
 public class SpringBootStarterApplication {
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.patagonia.spring_boot_starter;
+package com.patagonia.starter;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
