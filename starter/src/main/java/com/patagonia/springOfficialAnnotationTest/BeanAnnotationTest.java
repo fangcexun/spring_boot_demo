@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  */
 @Configuration
 public class BeanAnnotationTest {
-    @Bean
+    @Bean("manualBeanName")
     public MyBean myBeanName() {
         return new MyBean();
     }
