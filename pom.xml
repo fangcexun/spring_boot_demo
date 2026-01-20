@@ -19,6 +19,12 @@
     <maven-plugin.version>3.8.1</maven-plugin.version>
     <project.version>1.0-SNAPSHOT</project.version>
     <project.groupId>com.patagonia</project.groupId>
+    <javax.validation.version>1.1.0.Final</javax.validation.version>
+    <lombok.version>1.18.22</lombok.version>
+    <!-- hibernate-validator 版本，与 Spring Boot 2.6.13 / 2.7.18 兼容 -->
+    <!-- Spring Boot 2.7.x 使用 javax.validation 命名空间，应使用 6.x 系列 -->
+    <!-- Hibernate Validator 7.0+ 使用 jakarta.validation，仅适用于 Spring Boot 3.x -->
+    <hibernate-validator.version>6.2.5.Final</hibernate-validator.version>
   </properties>
 
   <modules>
@@ -36,6 +42,19 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>${lombok.version}</version>
+      </dependency>
+
+      <!-- hibernate-validator 版本仲裁 -->
+      <dependency>
+        <groupId>org.hibernate.validator</groupId>
+        <artifactId>hibernate-validator</artifactId>
+        <version>${hibernate-validator.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
@@ -44,6 +63,12 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.validation</groupId>
+      <artifactId>validation-api</artifactId>
+      <version>${javax.validation.version}</version>
     </dependency>
 
     <dependency>
