@@ -26,7 +26,8 @@ public class MainController {
     @ResponseBody
     public String test2() {
         RequestInner requestInner = new RequestInner();
-        requestInner.setName("testName");
+        requestInner.setName("");
+        requestInner.setAge("");
         try {
             return myService.methodTwo(requestInner);
         } catch (Throwable throwable) {

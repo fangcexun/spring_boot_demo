@@ -24,7 +24,7 @@
         </dependency>
         <!-- 添加 hibernate-validator 实现，使 @Valid 注解在 Service 层生效 -->
         <dependency>
-            <groupId>org.hibernate.validator</groupId>
+            <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
         </dependency>
         <dependency>
