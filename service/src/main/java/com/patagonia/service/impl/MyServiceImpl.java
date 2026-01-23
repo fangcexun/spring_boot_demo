@@ -21,6 +21,6 @@ public class MyServiceImpl implements MyService {
 
     @Override
     public String methodTwo(@Valid RequestInner requestInner) {
-        return requestInner.getName() + " " + requestInner.getAge();
+        return requestInner.getPersonRequestList().toString();
     }
 }

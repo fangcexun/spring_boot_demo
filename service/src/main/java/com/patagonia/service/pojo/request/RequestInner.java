@@ -1,8 +1,13 @@
 package com.patagonia.service.pojo.request;
 
-import javax.validation.constraints.NotBlank;
+import java.util.List;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import lombok.Data;
+import org.hibernate.validator.constraints.NotBlank;
 
 /**
  * @author xunfangce
@@ -10,15 +15,12 @@ import lombok.Data;
  */
 @Data
 public class RequestInner {
-    /**
-     * 姓名，不能为空（包括 null、空字符串和空白字符）
-     */
-    @NotBlank(message = "name不能为空")
-    private String name;
+    @NotNull(message = "requestId不能为空")
+    @Size(min = 1, message = "requestId不能为空")
+    String requestId;
 
-    /**
-     * 年龄，不能为空（包括 null、空字符串和空白字符）
-     */
-    @NotBlank(message = "age不能为空")
-    private String age;
+    @NotNull(message = "personRequestList不能为空")
+    @Size(min = 1, message = "personRequestList不能为空")
+    @Valid
+    List<PersonRequest> personRequestList;
 }

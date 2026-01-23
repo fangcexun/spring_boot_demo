@@ -1,6 +1,9 @@
 package com.patagonia.controller;
 
+import java.util.Arrays;
+
 import com.patagonia.service.MyService;
+import com.patagonia.service.pojo.request.PersonRequest;
 import com.patagonia.service.pojo.request.RequestInner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,13 +29,15 @@ public class MainController {
     @ResponseBody
     public String test2() {
         RequestInner requestInner = new RequestInner();
-        requestInner.setName("");
-        requestInner.setAge("");
+
+        PersonRequest personRequest = new PersonRequest();
+        requestInner.setPersonRequestList(Arrays.asList(personRequest));
+
         try {
             return myService.methodTwo(requestInner);
         } catch (Throwable throwable) {
             System.out.println(throwable.getMessage());
         }
-        return requestInner.getName() + " " + requestInner.getAge();
+        return "error";
     }
 }
