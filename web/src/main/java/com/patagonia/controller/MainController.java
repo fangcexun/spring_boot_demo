@@ -40,4 +40,22 @@ public class MainController {
         }
         return "error";
     }
+
+    @RequestMapping("/mainController3")
+    @ResponseBody
+    public String test3() {
+        RequestInner requestInner = new RequestInner();
+
+        PersonRequest personRequest = new PersonRequest();
+        personRequest.setAge("1");
+        personRequest.setName("1");
+
+        requestInner.setPersonRequestList(Arrays.asList(personRequest));
+        try {
+            return myService.methodThree(Arrays.asList(requestInner));
+        } catch (Throwable throwable) {
+            System.out.println(throwable.getMessage());
+        }
+        return "error";
+    }
 }

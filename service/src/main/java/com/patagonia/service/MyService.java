@@ -1,5 +1,7 @@
 package com.patagonia.service;
 
+import java.util.List;
+
 import com.patagonia.service.pojo.request.RequestInner;
 
 import javax.validation.Valid;
@@ -17,4 +19,6 @@ public interface MyService {
      * @return 处理结果
      */
     String methodTwo(@Valid RequestInner requestInner);
+
+    String methodThree(@Valid List<RequestInner> requestInnerList);
 }

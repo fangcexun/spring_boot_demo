@@ -1,5 +1,7 @@
 package com.patagonia.service.impl;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import com.patagonia.service.MyService;
@@ -22,5 +24,10 @@ public class MyServiceImpl implements MyService {
     @Override
     public String methodTwo(@Valid RequestInner requestInner) {
         return requestInner.getPersonRequestList().toString();
+    }
+
+    @Override
+    public String methodThree(@Valid List<RequestInner> requestInnerList) {
+        return requestInnerList.stream().toString();
     }
 }
